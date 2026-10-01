@@ -6,7 +6,12 @@ export const CardPost = ({ post }) => {
     <article className="card-post">
       <header>
         <figure>
-          <Avatar src={post.cover} alt={post.title} width={438} height={133} />
+          <Avatar
+            src={`Capa do post de titulo ${post.cover}`}
+            alt={post.title}
+            width={438}
+            height={133}
+          />
         </figure>
       </header>
       <section>
