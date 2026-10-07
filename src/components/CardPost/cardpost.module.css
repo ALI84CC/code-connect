@@ -1,31 +1,80 @@
 .card {
-  /* Pode deixar vazio por enquanto ou colocar estilos do card aqui */
-  border: 1px solid #898989;
+  max-width: 486px; /* Largura máxima ideal do card completo */
   width: 100%;
-  max-width: 486px;
+  background-color: #1a1a1a; /* Fundo escuro para a área dos textos */
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.header figure {
-  bakcground-color: #898989;
-  display: flex.;
-  align-item: center;
+.header {
+  background-color: #888888; /* O fundo cinza do cabeçalho */
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza a figure horizontalmente */
+  align-items: center; /* Centraliza a figure verticalmente */
+  padding: 24px; /* Respeita o espaçamento das bordas do design */
+  box-sizing: border-box;
 }
 
 .figure {
-  margin: 0; /* É uma boa prática zerar a margem padrão do figure */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 133px; /* Casamento perfeito com a altura definida no Next.js Image */
+}
+
+/* Garante que o componente Image do Next.js se comporte bem e centralize */
+.figure img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Evita distorções no banner */
 }
 
 .section {
+  padding: 24px 24px 0 24px; /* Espaçamento interno para os textos */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .title {
-  color: #ffffff; /* Usa dois pontos (:) e termina com ponto e vírgula (;) */
+  color: #ffffff;
   font-size: 1.5rem;
-  margin-top: 16px;
+  margin: 0;
+  font-weight: bold;
 }
 
 .body {
   color: #bcbcbc;
-  margin-top: 8px;
-  margin-bottom: 16px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Estilização para o link de detalhes que você adicionou */
+.section a {
+  color: #818cf8; /* Cor indigo suave */
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  padding: 16px 24px 24px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Afasta o username do avatar */
+}
+
+.username {
+  color: #888888;
+  font-size: 0.85rem;
 }

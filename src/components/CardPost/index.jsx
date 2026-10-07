@@ -25,11 +25,10 @@ export const CardPost = ({ post }) => {
       </section>
       <footer className={styles.footer}>
         {post.author && (
-          <Avatar
-            imgSrc={post.author.avatar}
-            name={post.author.name}
-            className={styles.name}
-          />
+          <>
+            <span className={styles.username}>@{post.author.username}</span>
+            <Avatar imgSrc={post.author.avatar} name={post.author.name} />
+          </>
         )}
       </footer>
     </article>
