@@ -1,28 +1,18 @@
+// src/app/page.js
+import postsData from "@/data/posts.json";
 import { CardPost } from "@/components/CardPost";
-const posts = [
-  {
-    id: 1,
-    cover:
-      "https://raw.githubusercontent.com/viniciosneves/code-connect-assets/main/posts/introducao-ao-react.png",
-    title: "Introdução ao React",
-    slug: "introducao-ao-react",
-    body: "Neste post, vamos explorar os conceitos básicos do React, uma biblioteca JavaScript para construir interfaces de usuário. Vamos cobrir componentes, JSX e estados.",
-    markdown:
-      "```javascript\nfunction HelloComponent() {\n  return <h1>Hello, world!</h1>;\n}\n```",
-    author: {
-      id: 101,
-      name: "Ana Beatriz",
-      username: "anabeatriz_dev",
-      avatar:
-        "https://raw.githubusercontent.com/viniciosneves/code-connect-assets/main/authors/anabeatriz_dev.png",
-    },
-  },
-];
 
-export default function Home() {
+export default function HomePage() {
+  // Acessamos postsData.posts que é onde a lista real está guardada
+  const listaDePosts = postsData.posts;
+
   return (
-    <main>
-      <CardPost post={posts[0]} />
+    <main style={{ padding: "20px", backgroundColor: "#070707" }}>
+      <section style={{ display: "grid", gap: "20px" }}>
+        {listaDePosts.map((post) => (
+          <CardPost key={post.id} post={post} />
+        ))}
+      </section>
     </main>
   );
 }

@@ -1,0 +1,10 @@
+.ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.2px;
+}
+.li {
+  color: #ffffff; /* Usa dois pontos (:) e termina com ponto e vírgula (;) */
+  font-size: 1.5rem;
+}

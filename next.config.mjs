@@ -4,9 +4,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**.raw.githubusercontent",
+        hostname: "raw.githubusercontent.com",
         port: "",
-        search: "**",
+        search: "/**",
+        pathname: "/viniciosneves/code-connect-assets/**",
+        search: "",
       },
     ],
   },

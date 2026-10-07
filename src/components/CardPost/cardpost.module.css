@@ -1,0 +1,31 @@
+.card {
+  /* Pode deixar vazio por enquanto ou colocar estilos do card aqui */
+  border: 1px solid #898989;
+  width: 100%;
+  max-width: 486px;
+}
+
+.header figure {
+  bakcground-color: #898989;
+  display: flex.;
+  align-item: center;
+}
+
+.figure {
+  margin: 0; /* É uma boa prática zerar a margem padrão do figure */
+}
+
+.section {
+}
+
+.title {
+  color: #ffffff; /* Usa dois pontos (:) e termina com ponto e vírgula (;) */
+  font-size: 1.5rem;
+  margin-top: 16px;
+}
+
+.body {
+  color: #bcbcbc;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}

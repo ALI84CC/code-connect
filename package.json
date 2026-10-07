@@ -13,5 +13,8 @@
     "npm": "^11.20.0",
     "react": "^18",
     "react-dom": "^18"
+  },
+  "devDependencies": {
+    "baseline-browser-mapping": "^2.11.27"
   }
 }

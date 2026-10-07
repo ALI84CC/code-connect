@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./aside.module.css";
-import logo from "./logo.png";
+import logo from "../Aside/Logo.png";
 
 export const Aside = () => {
   return (
