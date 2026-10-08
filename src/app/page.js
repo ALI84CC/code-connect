@@ -1,6 +1,10 @@
-// src/app/page.js
+"use client";
+
 import postsData from "@/data/posts.json";
-import { CardPost } from "@/components/CardPost";
+
+import styles from "./page.module.css";
+
+import { Carrossel } from "@/components/Carrossel";
 
 export default function HomePage() {
   // Acessamos postsData.posts que é onde a lista real está guardada
@@ -8,11 +12,7 @@ export default function HomePage() {
 
   return (
     <main style={{ padding: "20px", backgroundColor: "#070707" }}>
-      <section style={{ display: "grid", gap: "20px" }}>
-        {listaDePosts.map((post) => (
-          <CardPost key={post.id} post={post} />
-        ))}
-      </section>
+      <Carrossel />
     </main>
   );
 }

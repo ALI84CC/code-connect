@@ -1,0 +1,64 @@
+.carrosselContainer {
+  width: 100%;
+  max-width: 1440px; /* Alinhado ao seu desktop */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.controles {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.controles button {
+  background-color: #8844ff; /* cor destaque do seu projeto */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controles button:disabled {
+  background-color: #333;
+  cursor: not-allowed;
+}
+
+.containerControles {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.botaoCarrossel {
+  background-color: #2e2e2e; /* Um cinza escuro que combina com o fundo */
+  color: #fafafa;
+  border: 1px solid #4a4a4a;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botaoCarrossel:hover {
+  background-color: #444444; /* Efeito de destaque ao passar o mouse */
+}
+
+/* O grid que vai organizar os 4 cards ativos */
+.gridCards {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Cria 4 colunas para colocar 4 cards em uma linha */
+  gap: 32px; /* Espaçamento entre os cards */
+}
+
+/* Se você preferir os 4 em uma linha única no Desktop (se couber no espaço horizontal): */
+@media (min-width: 1200px) {
+  .gridCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,9 @@
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual */
+
+  width: 996px; /* Largura total do grid */
+  margin: 0 auto; /* Centraliza o grid horizontalmente */
+  gap: 20px; /* Espaçamento entre os cards */
+  overflow: hidden; /* Permite que os cards quebrem para a próxima linha se necessário */
+}
