@@ -26,8 +26,8 @@ export const CardPost = ({ post }) => {
       <footer className={styles.footer}>
         {post.author && (
           <>
+            <Avatar imgSrc={post.author.avatar} />
             <span className={styles.username}>@{post.author.username}</span>
-            <Avatar imgSrc={post.author.avatar} name={post.author.name} />
           </>
         )}
       </footer>

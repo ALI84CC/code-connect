@@ -1,9 +1,13 @@
 .card {
+  position: relative; /* Permite que o footer se posicione em relação ao card */
   max-width: 486px; /* Largura máxima ideal do card completo */
   width: 100%;
+  height: auto; /* Altura automática para se ajustar ao conteúdo */
+
   background-color: #1a1a1a; /* Fundo escuro para a área dos textos */
   border-radius: 12px;
   overflow: hidden;
+
   display: flex;
   flex-direction: column;
 }
@@ -56,6 +60,9 @@
 }
 
 /* Estilização para o link de detalhes que você adicionou */
+.section {
+  margin-bottom: 45px; /* Espaço entre o corpo do post e o link */
+}
 .section a {
   color: #818cf8; /* Cor indigo suave */
   text-decoration: none;
@@ -67,14 +74,31 @@
   text-decoration: underline;
 }
 
-.footer {
-  padding: 16px 24px 24px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Afasta o username do avatar */
+.campos_card_post,
+.post,
+.card {
+  /* Subititua pelo nome exato da classe que você usou no <article> */
+  position: relative; /* CRUCIAL: Diz ao footer para se alinhar em relação a ESTE card */
+
+  /* Mantendo suas configurações de largura e fluxo */
+  width: 438px;
+  height: auto;
+  padding: 24px;
+  background-color: #1a1a1a; /* cor de fundo do seu card */
+  border-radius: 8px;
 }
 
-.username {
-  color: #888888;
-  font-size: 0.85rem;
+.footer {
+  position: absolute; /* Permite que o footer se posicione em relação ao card */
+  bottom: 5px;
+  right: 5px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Afasta o username do avatar */
+
+  height: 47px;
+  width: auto;
+  gap: 8px;
 }
