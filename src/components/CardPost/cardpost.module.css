@@ -1,15 +1,7 @@
 .card {
-  position: relative; /* Permite que o footer se posicione em relação ao card */
-  max-width: 486px; /* Largura máxima ideal do card completo */
-  width: 100%;
-  height: auto; /* Altura automática para se ajustar ao conteúdo */
-
   background-color: #1a1a1a; /* Fundo escuro para a área dos textos */
   border-radius: 12px;
   overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .header {
@@ -101,4 +93,10 @@
   height: 47px;
   width: auto;
   gap: 8px;
+}
+
+footer .username {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
 }

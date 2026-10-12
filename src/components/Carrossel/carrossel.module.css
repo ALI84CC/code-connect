@@ -1,7 +1,7 @@
 .carrosselContainer {
   width: 100%;
   max-width: 1440px; /* Alinhado ao seu desktop */
-  margin: 0 auto;
+  margin-bottom: 0 auto;
   padding: 20px;
 }
 
@@ -42,6 +42,12 @@
   transition: background 0.2s;
 }
 
+.grupoDeCards {
+  display: inline-flex;
+  gap: 20px;
+
+  flex-wrap: balance;
+}
 .botaoCarrossel:hover {
   background-color: #444444; /* Efeito de destaque ao passar o mouse */
 }
@@ -50,15 +56,15 @@
 .gridCards {
   display: grid;
   grid-template-columns: repeat(
-    4,
+    2,
     1fr
-  ); /* Cria 4 colunas para colocar 4 cards em uma linha */
-  gap: 32px; /* Espaçamento entre os cards */
+  ); /* Cria 2 colunas para colocar 2 cards em uma linha */
+  gap: 40px; /* Espaçamento entre os cards */
 }
 
 /* Se você preferir os 4 em uma linha única no Desktop (se couber no espaço horizontal): */
 @media (min-width: 1200px) {
   .gridCards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
