@@ -2,9 +2,8 @@
 
 import postsData from "@/data/posts.json";
 
-import styles from "./page.module.css";
-
 import { Carrossel } from "@/components/Carrossel";
+import { BarSearch } from "@/components/BarraBusca";
 
 export default function HomePage() {
   // Acessamos postsData.posts que é onde a lista real está guardada
@@ -12,6 +11,7 @@ export default function HomePage() {
 
   return (
     <main style={{ padding: "20px", backgroundColor: "#070707" }}>
+      <BarSearch />
       <Carrossel />
     </main>
   );
