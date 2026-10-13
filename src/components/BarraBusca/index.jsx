@@ -1,5 +1,6 @@
 import styles from "./barraBusca.module.css";
 import Image from "next/image";
+import search from "@/components/BarraBusca/search.png";
 
 export const BarSearch = (params) => {
   return (
@@ -7,10 +8,10 @@ export const BarSearch = (params) => {
       <div className={styles.iconeBusca}>
         <div className={styles.inputContainer}>
           <Image
-            src="/search.png"
+            className={styles.icone}
+            src={search}
             alt="Ícone de busca"
-            width={25}
-            height={25}
+            size={20}
           />
           <input
             type="text"

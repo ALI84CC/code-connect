@@ -3,22 +3,39 @@
   justify-content: space-between;
 }
 .inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
   width: 896px;
-  height: 51px;
-  border-radius: 4px;
-  background-color: #436570;
-  padding: 8px 16px;
+  max-width: 332px;
 }
 
-.iconeBusca {
-  box-sizing: border-box;
+.icone {
+  position: absolute;
+  left: 12px;
+  color: #a1a1aa; /* Cor cinza padrão */
+  pointer-events: none;
+}
+
+.inputBusca {
+  width: 100%;
+  padding: 10px 12px 10px 40px; /* Padding esquerdo maior (40px) para dar espaço ao ícone */
+  background-color: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: 6px;
+  color: #ffffff;
+  outline: none;
+}
+
+.inputBusca:focus {
+  border-color: #a855f7; /* Cor roxa de foco baseada no seu layout */
 }
 
 .botaoBusca {
   width: 92px;
   height: 51px;
 
-  background-color: ##81fe88;
+  background-color: #81fe88;
   color: #000;
   border: none;
   padding: 12px 16px;
