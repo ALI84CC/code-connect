@@ -3,6 +3,7 @@
   justify-content: space-between;
 }
 .inputContainer {
+  width: 896px;
   position: relative;
   display: flex;
   align-items: center;

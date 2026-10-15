@@ -12,6 +12,15 @@ const nextConfig = {
       },
     ],
   },
+  webpack: (config, { isServer }) => {
+    // Se não for o servidor (ou seja, se for o cliente), ignora o módulo 'fs'
+    if (!isServer) {
+      config.resolve.fallback = {
+        fs: false,
+      };
+    }
+    return config;
+  },
 };
 
 export default nextConfig;
