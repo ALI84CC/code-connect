@@ -2,7 +2,8 @@
   width: 100%;
   max-width: 1440px; /* Alinhado ao seu desktop */
   margin-bottom: 0 auto;
-  padding: 20px;
+  padding: 0 24px; /* Espaçamento interno para telas menores */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total*/
 }
 
 .controles {
@@ -29,7 +30,7 @@
 .containerControles {
   display: flex;
   gap: 8px;
-  margin-bottom: 16px;
+  padding-bottom: 25px;
 }
 
 .botaoCarrossel {
@@ -43,10 +44,17 @@
 }
 
 .grupoDeCards {
-  display: inline-flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Mantém duas colunas perfeitas lado a lado */
+  gap: 20px; /* O espaçamento entre os cards */
 
-  flex-wrap: balance;
+  /* AJUSTE ESSAS PROPRIEDADES: */
+  width: 100%; /* Faz o grid ocupar o espaço total disponível */
+  max-width: 896px; /* Alinha com a largura de 896px da sua barra de busca! */
+  margin: 0 auto;
 }
 .botaoCarrossel:hover {
   background-color: #444444; /* Efeito de destaque ao passar o mouse */

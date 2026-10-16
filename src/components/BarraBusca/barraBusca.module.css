@@ -1,46 +1,66 @@
 .barraBusca {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  margin: 0 auto 40px;
 }
 .inputContainer {
-  width: 896px;
   position: relative;
   display: flex;
   align-items: center;
-  width: 896px;
-  max-width: 332px;
+
+  /* TRAVA AS MEDIDAS DO FIGMA AQUI: */
+  width: 896px; /* Largura exata que você viu no Figma */
+  max-width: 100%; /* Impede que quebre em telas muito pequenas */
+  height: 51px; /* Altura exata do Figma */
 }
 
 .icone {
   position: absolute;
-  left: 12px;
-  color: #a1a1aa; /* Cor cinza padrão */
-  pointer-events: none;
+  left: 16px;
+  left: 16px;
+  z-index: 1;
+  color: #818cf8; /* Cor indigo suave */
+  font-size: 1.2rem;
 }
 
 .inputBusca {
   width: 100%;
-  padding: 10px 12px 10px 40px; /* Padding esquerdo maior (40px) para dar espaço ao ícone */
+  height: 100%;
+  padding: 12px 16px 12px 48px; /* Padding esquerdo maior (48px) para dar espaço ao ícone */
   background-color: #18181b;
   border: 1px solid #3f3f46;
-  border-radius: 6px;
+  border-radius: 8px;
   color: #ffffff;
   outline: none;
 }
 
 .inputBusca:focus {
-  border-color: #a855f7; /* Cor roxa de foco baseada no seu layout */
+  color: #959595; /* Cor roxa de foco baseada no seu layout */
 }
 
 .botaoBusca {
-  width: 92px;
-  height: 51px;
+  flex-shrink: 0; /* Impede que o botão encolha */
+  width: 102px;
+  height: 75px;
 
   background-color: #81fe88;
-  color: #000;
-  border: none;
+  color: #050505;
+
+  font-weight: 600;
+  font-size: 1rem;
+
   padding: 12px 16px;
-  border-radius: 4px;
+
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  margin-right: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.botaoBusca:hover {
+  background-color: #6adb71; /* Efeito hover sutil para o botão */
 }
