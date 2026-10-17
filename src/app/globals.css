@@ -5,10 +5,22 @@ body {
 }
 
 .app-container {
-  width: 1250px;
-  max-width: 90%;
-  margin: 56px auto;
   display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin: 56px auto;
   gap: 28px;
-  height: 100vh;
+  /* IMPORTANTE: Alinha os filhos para esticarem juntos até a altura do maior (o feed) */
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.app-container main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 996px; /* Largura total exata separada para o feed */
+  gap: 56px;
+  box-sizing: border-box;
 }

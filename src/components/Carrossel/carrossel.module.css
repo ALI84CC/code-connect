@@ -1,78 +1,43 @@
 .carrosselContainer {
   width: 100%;
-  max-width: 1440px; /* Alinhado ao seu desktop */
-  margin-bottom: 0 auto;
-  padding: 0 24px; /* Espaçamento interno para telas menores */
-  box-sizing: border-box; /* Garante que o padding não aumente a largura total*/
+  margin-top: -24px; /* Sua solução atual */
+  margin-left: -4px; /* Empurra levemente para a esquerda. Teste valores como -8px se precisar de mais */
+  box-sizing: border-box;
 }
 
-.controles {
+/* Container que envelopa o Grid e os botões */
+.containerControles {
   display: flex;
-  justify-content: flex-end;
-  gap: 16px;
-  margin-bottom: 24px;
+  flex-direction: column; /* Alinha o grid e os botões verticalmente */
+  gap: 24px; /* Espaço entre a grade de cards e os botões abaixo */
+  width: 100%;
 }
 
-.controles button {
-  background-color: #8844ff; /* cor destaque do seu projeto */
-  color: white;
-  border: none;
+/* O grid que organiza os 6 cards (3 linhas x 2 colunas) */
+.grupoDeCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas perfeitas lado a lado */
+  gap: 24px; /* Ajuste o valor do gap conforme o espaçamento do Figma entre os cards */
+  width: 100%;
+}
+
+/* Alinhamento dos botões 'Anterior' e 'Próximo' abaixo dos cards */
+.botaoCarrossel {
+  background-color: #2e2e2e;
+  color: #fafafa;
+  border: 1px solid #4a4a4a;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.controles button:disabled {
-  background-color: #333;
-  cursor: not-allowed;
-}
-
-.containerControles {
-  display: flex;
-  gap: 8px;
-  padding-bottom: 25px;
-}
-
-.botaoCarrossel {
-  background-color: #2e2e2e; /* Um cinza escuro que combina com o fundo */
-  color: #fafafa;
-  border: 1px solid #4a4a4a;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
   transition: background 0.2s;
+  margin-right: 8px; /* Pequeno espaçamento entre os botões */
 }
 
-.grupoDeCards {
-  display: grid;
-  grid-template-columns: repeat(
-    2,
-    1fr
-  ); /* Mantém duas colunas perfeitas lado a lado */
-  gap: 20px; /* O espaçamento entre os cards */
-
-  /* AJUSTE ESSAS PROPRIEDADES: */
-  width: 100%; /* Faz o grid ocupar o espaço total disponível */
-  max-width: 896px; /* Alinha com a largura de 896px da sua barra de busca! */
-  margin: 0 auto;
-}
 .botaoCarrossel:hover {
-  background-color: #444444; /* Efeito de destaque ao passar o mouse */
+  background-color: #444444;
 }
 
-/* O grid que vai organizar os 4 cards ativos */
-.gridCards {
-  display: grid;
-  grid-template-columns: repeat(
-    2,
-    1fr
-  ); /* Cria 2 colunas para colocar 2 cards em uma linha */
-  gap: 40px; /* Espaçamento entre os cards */
-}
-
-/* Se você preferir os 4 em uma linha única no Desktop (se couber no espaço horizontal): */
-@media (min-width: 1200px) {
-  .gridCards {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.botaoCarrossel:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }

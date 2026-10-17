@@ -19,7 +19,10 @@ export default function RootLayout({ children }) {
       <body>
         <div className="app-container">
           <Aside />
-          {children}
+          <main>
+            {/* O Next.js vai injetar a sua page.js exatamente aqui dentro */}
+            {children}
+          </main>
         </div>
       </body>
     </html>

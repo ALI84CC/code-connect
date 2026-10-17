@@ -7,7 +7,7 @@ export function Carrossel() {
   const [grupoAtual, setGrupoAtual] = useState(0);
   const posts = postsData.posts || postsData;
 
-  const agruparDeQuatro = (Array, tamanhoDoGrupo) => {
+  const agruparDeSeis = (Array, tamanhoDoGrupo) => {
     const grupos = [];
     for (let i = 0; i < Array.length; i += tamanhoDoGrupo) {
       grupos.push(Array.slice(i, i + tamanhoDoGrupo));
@@ -15,7 +15,7 @@ export function Carrossel() {
     return grupos;
   };
 
-  const listaDeGrupos = agruparDeQuatro(posts, 4);
+  const listaDeGrupos = agruparDeSeis(posts, 6);
   const totalDeGrupos = listaDeGrupos.length;
 
   const irParaProximoGrupo = () => {
@@ -28,6 +28,11 @@ export function Carrossel() {
   return (
     <div className={styles.carrosselContainer}>
       <div className={styles.containerControles}>
+        <div className={styles.grupoDeCards}>
+          {listaDeGrupos[grupoAtual]?.map((post) => (
+            <CardPost key={post.id} post={post} />
+          ))}
+        </div>
         <button
           onClick={irParaGrupoAnterior}
           className={styles.botaoCarrossel}
@@ -42,11 +47,6 @@ export function Carrossel() {
         >
           Próximo ▶
         </button>
-      </div>
-      <div className={styles.grupoDeCards}>
-        {listaDeGrupos[grupoAtual]?.map((post) => (
-          <CardPost key={post.id} post={post} />
-        ))}
       </div>
     </div>
   );

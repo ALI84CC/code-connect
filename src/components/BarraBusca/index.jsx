@@ -2,7 +2,7 @@ import styles from "./barraBusca.module.css";
 import Image from "next/image";
 import search from "@/components/BarraBusca/search.png";
 
-export const BarSearch = (params) => {
+export const BarraBusca = (params) => {
   return (
     <div className={styles.barraBusca}>
       <div className={styles.iconeBusca}>

@@ -2,7 +2,7 @@
 import logger from "@/logger";
 
 import { Carrossel } from "@/components/Carrossel";
-import { BarSearch } from "@/components/BarraBusca";
+import { BarraBusca } from "@/components/BarraBusca";
 
 async function fetchPosts() {
   try {
@@ -28,7 +28,7 @@ export default async function HomePage() {
 
   return (
     <main style={{ padding: "20px", backgroundColor: "#070707" }}>
-      <BarSearch />
+      <BarraBusca />
       <Carrossel posts={listaDePosts} />
     </main>
   );

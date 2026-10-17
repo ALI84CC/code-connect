@@ -1,5 +1,8 @@
 .aside {
+  width: 176px; /* Ajuste para bater com o valor real do seu menu no Figma */
   border-radius: 8px;
   background: #171d1f;
   padding: 40px 16px;
+  box-sizing: border-box;
+  /* height: auto ou sem height faz com que o 'align-items: stretch' do pai funcione */
 }
