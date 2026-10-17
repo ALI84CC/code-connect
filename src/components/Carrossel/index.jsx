@@ -33,20 +33,23 @@ export function Carrossel() {
             <CardPost key={post.id} post={post} />
           ))}
         </div>
-        <button
-          onClick={irParaGrupoAnterior}
-          className={styles.botaoCarrossel}
-          disabled={totalDeGrupos <= 1}
-        >
-          ◀ Anterior
-        </button>
-        <button
-          onClick={irParaProximoGrupo}
-          className={styles.botaoCarrossel}
-          disabled={totalDeGrupos <= 1}
-        >
-          Próximo ▶
-        </button>
+        <div className={styles.botoesWrapper}>
+          <button
+            onClick={irParaGrupoAnterior}
+            className={styles.botaoCarrossel}
+            disabled={totalDeGrupos <= 1}
+          >
+            ◀ Anterior
+          </button>
+
+          <button
+            onClick={irParaProximoGrupo}
+            className={styles.botaoCarrossel}
+            disabled={totalDeGrupos <= 1}
+          >
+            Próximo ▶
+          </button>
+        </div>
       </div>
     </div>
   );

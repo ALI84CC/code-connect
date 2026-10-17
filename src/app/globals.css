@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 996px; /* Largura total exata separada para o feed */
+  width: 1024px; /* Largura total exata separada para o feed */
   gap: 56px;
   box-sizing: border-box;
 }
