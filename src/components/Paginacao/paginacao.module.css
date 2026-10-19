@@ -1,0 +1,31 @@
+.botoesWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 12px;
+  width: 100%;
+  max-width: 1004px;
+  margin: 24px auto 0;
+}
+
+.botaoPaginacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Remove o sublinhado do Link */
+  background-color: #2e2e2e;
+  color: #fafafa;
+  border: 1px solid #4a4a4a;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  height: 38px;
+  width: max-content;
+}
+
+.botaoPaginacao:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
