@@ -25,11 +25,10 @@ body {
   box-sizing: border-box;
 }
 
-.grupoDeCards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas perfeitas */
-  gap: 24px;
+section .grupoDeCards{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 56px;
   width: 100%;
-  max-width: 1004px; /* Tamanho limite simétrico alinhado à barra de busca */
-  margin: 0 auto; /* Centraliza na tela */
 }
