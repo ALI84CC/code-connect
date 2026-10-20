@@ -22,7 +22,7 @@ export function Paginacao({ paginaAtual, totalPaginas }) {
       {/* Botão Próximo */}
       {paginaAtual < totalPaginas ? (
         <Link
-          href={`?_page=${paginaAtual + 1}&_per_page=4`}
+          href={`?_page=${paginaAtual + 1}&_per_page=6`}
           className={styles.botaoPaginacao}
         >
           Próximo ▶

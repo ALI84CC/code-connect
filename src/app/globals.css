@@ -24,11 +24,3 @@ body {
   gap: 56px;
   box-sizing: border-box;
 }
-
-section .grupoDeCards{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 56px;
-  width: 100%;
-}

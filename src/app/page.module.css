@@ -1,0 +1,15 @@
+.grupoDeCards {
+  display: grid;
+  /* Força o grid a criar exatamente duas colunas de tamanhos iguais lado a lado */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px; /* Espaçamento uniforme entre os cards */
+  width: 100%;
+  max-width: 1004px; /* Garante que fique alinhado de ponta a ponta com sua barra de busca */
+  margin: 32px auto; /* Centraliza o bloco na tela e o afasta da busca e dos botões */
+}
+/* Responsividade: Caso o usuário abra em telas de celular, os cards empilham em 1 coluna */
+@media (max-width: 768px) {
+  .grupoDeCards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
