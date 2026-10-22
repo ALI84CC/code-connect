@@ -2,6 +2,7 @@ import logger from "@/logger";
 import { Paginacao } from "@/components/Paginacao/paginacao";
 import { CardPost } from "@/components/CardPost";
 import { BarraBusca } from "@/components/BarraBusca";
+import Link from "next/link";
 
 import Styles from "./page.module.css";
 
@@ -58,7 +59,13 @@ export default async function HomePage({ searchParams }) {
       {/* 3. A sua grade com os cards mantém o CSS perfeito que você já consertou */}
       <section className={Styles.grupoDeCards}>
         {listaDePostsValida.map((post) => (
-          <CardPost key={post.id} post={post} />
+          <Link
+            href={`/${post.slug}`}
+            key={post.id}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <CardPost key={post.id} post={post} />
+          </Link>
         ))}
       </section>
 

@@ -179,3 +179,59 @@
 {"level":"info","message":"Exibindo página 1 com 4 posts.","timestamp":"2026-10-20T00:25:15.252Z"}
 {"level":"info","message":"Exibindo página 1 com 4 posts.","timestamp":"2026-10-20T00:25:15.674Z"}
 {"level":"info","message":"Exibindo página 1 com 4 posts.","timestamp":"2026-10-20T01:17:16.458Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-20T02:20:15.280Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-20T02:20:15.545Z"}
+{"level":"info","message":"Exibindo página 2 no navegador.","timestamp":"2026-10-20T02:20:15.545Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-20T02:20:20.510Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-20T02:20:20.783Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-20T02:20:20.784Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:36:43.473Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:36:43.485Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:36:43.648Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-21T03:36:43.648Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:36:43.747Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-21T03:36:43.747Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:36:56.397Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:36:56.670Z"}
+{"level":"info","message":"Exibindo página 2 no navegador.","timestamp":"2026-10-21T03:36:56.670Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:37:26.298Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:37:26.520Z"}
+{"level":"info","message":"Exibindo página 2 no navegador.","timestamp":"2026-10-21T03:37:26.520Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:39:11.366Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:39:11.583Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-21T03:39:11.584Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:43:05.191Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:43:05.457Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:43:05.464Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-21T03:43:05.464Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:43:05.721Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-21T03:43:05.721Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:43:13.113Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:43:13.186Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:43:18.279Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-21T03:43:18.280Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:43:18.352Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-21T03:43:18.352Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:43:19.660Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:43:19.664Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-21T03:43:19.664Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T03:44:55.519Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T03:44:55.742Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-21T03:44:55.742Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-21T04:33:10.197Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-21T04:33:10.469Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-21T04:33:10.470Z"}
+{"level":"info","message":"Iniciando a busca do post pelo slug: introducao-ao-react","timestamp":"2026-10-22T08:53:07.324Z"}
+{"level":"error","message":"Falha ao conectar com o json-server: response is not defined","timestamp":"2026-10-22T08:53:07.705Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-22T08:53:11.919Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-22T08:53:11.936Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-22T08:53:11.936Z"}
+{"level":"info","message":"Iniciando a busca do post pelo slug: css-grid-na-pratica","timestamp":"2026-10-22T08:53:18.640Z"}
+{"level":"error","message":"Falha ao conectar com o json-server: response is not defined","timestamp":"2026-10-22T08:53:18.686Z"}
+{"level":"info","message":"Iniciando a busca do post pelo slug: introducao-ao-react","timestamp":"2026-10-22T08:53:43.242Z"}
+{"level":"error","message":"Falha ao conectar com o json-server: response is not defined","timestamp":"2026-10-22T08:53:43.294Z"}
+{"level":"info","message":"Iniciando a busca de posts...","timestamp":"2026-10-22T08:53:45.555Z"}
+{"level":"info","message":"Posts carregados com sucesso via API. Total: undefined","timestamp":"2026-10-22T08:53:45.558Z"}
+{"level":"info","message":"Exibindo página 1 no navegador.","timestamp":"2026-10-22T08:53:45.558Z"}
+{"level":"info","message":"Iniciando a busca do post pelo slug: dicas-de-acessibilidade-web","timestamp":"2026-10-22T08:53:49.416Z"}
+{"level":"error","message":"Falha ao conectar com o json-server: response is not defined","timestamp":"2026-10-22T08:53:49.575Z"}

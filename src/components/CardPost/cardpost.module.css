@@ -1,3 +1,9 @@
+.link {
+  text-decoration: none; /* Remove o sublinhado do link */
+  coursor: pointer; /* Muda o cursor para indicar que é clicável */
+  color: inherit; /* Mantém a cor do texto do card */
+}
+
 .card {
   background-color: #1a1a1a; /* Fundo escuro para a área dos textos */
   border-radius: 12px;
