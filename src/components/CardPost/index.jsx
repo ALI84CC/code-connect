@@ -23,7 +23,7 @@ export const CardPost = ({ post }) => {
         <section className={styles.section}>
           <h2 className={styles.title}>{post.title}</h2>
           <p className={styles.body}>{post.body}</p>
-          <a href={post.markdown}>Ver detalhe...</a>
+          <span>Ver detalhe...</span>
         </section>
         <footer className={styles.footer}>
           {post.author && (

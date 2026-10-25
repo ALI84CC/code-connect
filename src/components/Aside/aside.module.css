@@ -4,5 +4,6 @@
   background: #171d1f;
   padding: 40px 16px;
   box-sizing: border-box;
+  height: 100%;
   /* height: auto ou sem height faz com que o 'align-items: stretch' do pai funcione */
 }
