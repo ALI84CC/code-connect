@@ -46,3 +46,4 @@
 {"level":"error","message":"Falha ao conectar com o json-server: fetch failed","timestamp":"2026-10-24T04:34:52.578Z"}
 {"level":"error","message":"Falha ao conectar com o json-server: fetch failed","timestamp":"2026-10-24T04:35:01.932Z"}
 {"level":"error","message":"Falha ao conectar com o json-server: fetch failed","timestamp":"2026-10-24T04:35:05.238Z"}
+{"level":"error","message":"Falha ao conectar com o banco: fetch failed","timestamp":"2026-10-26T05:05:55.254Z"}

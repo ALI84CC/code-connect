@@ -446,3 +446,10 @@
 {"level":"info","message":"Posts obtidos com sucesso","timestamp":"2026-10-25T08:42:24.227Z"}
 {"level":"info","message":"Posts obtidos com sucesso","timestamp":"2026-10-25T08:42:24.228Z"}
 {"level":"info","message":"Exibindo página 1 no navegador com 6 posts.","timestamp":"2026-10-25T08:42:24.229Z"}
+{"level":"info","message":"Posts obtidos com sucesso","timestamp":"2026-10-26T04:34:21.630Z"}
+{"level":"info","message":"Posts obtidos com sucesso","timestamp":"2026-10-26T04:34:21.633Z"}
+{"level":"info","message":"Exibindo página 1 no navegador com 6 posts.","timestamp":"2026-10-26T04:34:21.635Z"}
+{"level":"info","message":"Posts obtidos com sucesso","timestamp":"2026-10-26T04:34:28.749Z"}
+{"level":"info","message":"Posts obtidos com sucesso","timestamp":"2026-10-26T04:34:28.750Z"}
+{"level":"info","message":"Exibindo página 1 no navegador com 6 posts.","timestamp":"2026-10-26T04:34:28.751Z"}
+{"level":"error","message":"Falha ao conectar com o banco: fetch failed","timestamp":"2026-10-26T05:05:55.254Z"}
