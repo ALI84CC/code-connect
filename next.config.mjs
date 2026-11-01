@@ -12,6 +12,8 @@ const nextConfig = {
       },
     ],
   },
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+
   webpack: (config, { isServer }) => {
     // Se não for o servidor (ou seja, se for o cliente), ignora o módulo 'fs'
     if (!isServer) {
