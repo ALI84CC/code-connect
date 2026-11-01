@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/lib/posts"; // Ajuste o caminho se necessário
+import { getPostBySlug } from "@/lib/route.js"; // Ajuste o caminho se necessário
 import { notFound } from "next/navigation";
 
 // No Next.js atual, a propriedade params recebida na página é uma Promise!

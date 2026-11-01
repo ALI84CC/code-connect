@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "backend": "json-server --watch src/data/posts.json --port 3801"
+    "backend": "json-server --watch src/data/posts.json --port 3001"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.15",

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   // Desestruturando corretamente a chave "posts" do seu posts.json
-  const { posts } = getAllPosts();
+  const posts = getAllPosts();
 
   return (
     <main
@@ -16,7 +16,6 @@ export default function HomePage() {
       }}
     >
       <BarraBusca />
-      <h1 style={{ marginBottom: "32px", fontSize: "2rem" }}>Lista de Posts</h1>
 
       {/* GRID RESPONSIVO: Mobile-first simples que vira Grid em telas maiores */}
       <section
@@ -53,6 +52,7 @@ export default function HomePage() {
                 src={post.cover}
                 alt={post.title}
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                priority
               />
             </div>
 
@@ -124,6 +124,7 @@ export default function HomePage() {
                   borderRadius: "50%",
                   objectFit: "cover",
                 }}
+                priority
               />
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <span style={{ fontSize: "0.85rem", fontWeight: "600" }}>
