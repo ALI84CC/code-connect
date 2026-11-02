@@ -10,6 +10,8 @@
     "backend": "json-server --watch src/data/posts.json --port 3001"
   },
   "dependencies": {
+    "dompurify": "^3.4.17",
+    "isomorphic-dompurify": "^3.19.0",
     "json-server": "^1.0.0-beta.15",
     "next": "14.2.35",
     "npm": "^11.20.0",
@@ -20,6 +22,7 @@
     "winston": "^3.19.0"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.5",
     "baseline-browser-mapping": "^2.11.27",
     "vite-plugin-devtools-json": "^1.1.2"
   }
