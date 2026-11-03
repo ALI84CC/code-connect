@@ -7,6 +7,7 @@ import { CardPost } from "@/components/CardPost";
 
 // 1. Importando o módulo de estilos da página
 import styles from "./page.module.css";
+import { BarraBusca } from "@/components/BarraBusca";
 
 export default async function PostPage({ params }) {
   const { slug } = await params;
@@ -23,6 +24,7 @@ export default async function PostPage({ params }) {
   return (
     // 2. Aplicando as classes limpas e sem estilos inline repetitivos
     <main className={styles.main}>
+      <BarraBusca />
       {post && <CardPost post={post} highlighted={true} />}
 
       <div className={styles.contentSection}>

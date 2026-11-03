@@ -1,26 +1,23 @@
 import Image from "next/image";
-import { Avatar } from "../Avatar";
-// 1. Importe o arquivo de estilos (ajuste o nome do arquivo se o seu estiver diferente)
-import styles from "./cardpost.module.css";
 import Link from "next/link";
+import { Avatar } from "../Avatar";
+import styles from "./cardpost.module.css";
 
 export const CardPost = ({ post, highlighted }) => {
   return (
-    // 2. Aplique as classes usando a sintaxe 'styles.nomeDaClasse'
     <Link href={`/posts/${post.slug}`} className={styles.link}>
+      {/* Classe dinâmica: adiciona a variação destacada se highlighted for true */}
       <article
         className={`${styles.card} ${highlighted ? styles.highlighted : ""}`}
       >
         <header className={styles.header}>
-          <figure
-            className={`${styles.figure} ${highlighted ? styles.highlighted : ""}`}
-          >
+          <figure className={styles.figure}>
             <Image
-              src={post.cover}
+              src={post.cover} // Puxa o link do posts.json
               alt={`Capa do post: ${post.title}`}
-              width={438}
-              height={133}
-              priority
+              fill // Preenche o container <figure> automaticamente
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 993px" // Otimização de entrega
+              priority={highlighted} // Carrega instantaneamente se for o card principal
             />
           </figure>
         </header>

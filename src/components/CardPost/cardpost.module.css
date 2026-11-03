@@ -1,25 +1,26 @@
 .link {
   text-decoration: none;
-  cursor: pointer; /* Correção da escrita de 'coursor' */
+  cursor: pointer;
   color: inherit;
 }
 
+/* Card Padrão (responsivo) */
 .card {
   background-color: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
-  position: relative; /* Mantido para o footer absoluto */
-  width: 100%; /* Largura fluida por padrão */
-  max-width: 486px; /* Limite do card normal */
+  position: relative; /* Mantido para alinhar o footer absoluto */
+  width: 100%; /* Ocupa a largura total disponível do grid/flex */
+  max-width: 486px; /* Limite do card normal na Home */
   height: auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
-/* Modificador para quando o card ocupar a largura total do Post */
+/* Modificador quando o card estiver na página de detalhe [slug] */
 .card.highlighted {
-  max-width: 993px;
+  max-width: 993px; /* Estica até o tamanho máximo do layout do post */
 }
 
 .header {
@@ -28,33 +29,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
-  box-sizing: border-box;
+  padding: 0; /* Removido o padding interno para que a imagem encoste nas bordas como no Figma */
+  overflow: hidden;
 }
 
+/* O container dita o tamanho da imagem */
 .figure {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  position: relative; /* CRUCIAL para o 'fill' da imagem funcionar */
   width: 100%;
-  height: 150px; /* Altura padrão para telas menores */
+  height: 180px; /* Altura padrão da foto em telas mobile/pequenas */
 }
 
-/* Se o card for destacado, a imagem ganha mais espaço em telas maiores */
+/* Se for o card destacado, a imagem ganha uma altura maior */
 .card.highlighted .figure {
-  height: 300px;
+  height: 320px; 
 }
 
+/* Alvo para o componente de imagem gerado pelo Next.js */
 .figure img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  object-fit: cover !important; /* Faz o recorte inteligente mantendo as proporções sem distorcer */
+  object-position: center;
 }
 
+/* Estilização do Conteúdo */
 .section {
-  padding: 24px 24px 60px 24px; /* Aumentado o padding-bottom para dar espaço seguro ao footer absoluto */
+  padding: 24px 24px 64px 24px; /* Espaço inferior extra para não cobrir o footer */
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -78,12 +78,12 @@
   color: #818cf8;
   font-size: 0.9rem;
   margin-top: 4px;
-  font-weight: 500;
 }
 
+/* Footer Absoluto */
 .footer {
   position: absolute;
-  bottom: 12px;
+  bottom: 16px;
   right: 16px;
   display: flex;
   flex-direction: row;
@@ -97,12 +97,12 @@
   font-weight: bold;
 }
 
-/* Media Query para telas muito pequenas (ajuste de fontes e paddings) */
-@media (max-width: 480px) {
-  .title {
-    font-size: 1.2rem;
+/* Ajustes finos para telas menores (celulares) */
+@media (max-width: 768px) {
+  .card.highlighted .figure {
+    height: 200px; /* Reduz a altura do banner grande no celular */
   }
-  .figure {
-    height: 120px;
+  .title {
+    font-size: 1.25rem;
   }
 }
