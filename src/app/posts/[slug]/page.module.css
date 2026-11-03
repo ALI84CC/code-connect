@@ -1,6 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centraliza verticalmente e alinha todos os blocos no meio */
   gap: 32px;
   max-width: 993px;
   width: 100%; /* Permite encolher em telas menores */
@@ -24,16 +25,25 @@
   margin-bottom: 16px;
 }
 
+/* Criamos um container para travar a largura máxima igual à da Home */
+.contentContainer {
+  width: 100%;
+  max-width: 1004px; /* Mesma largura máxima que usamos na Home */
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .codeContainer {
-  background-color: #2d2d2d; /* Um fundo escuro ideal para blocos de código */
-  width: 100%; /* Deixa de ser fixo em 993px e vira flexível */
+  background-color: #161616; /* Fundo escuro idêntico ao rodapé para criar contraste */
+  width: 100%;
   height: auto;
   padding: 24px;
   border-radius: 8px;
   box-sizing: border-box;
-  overflow-x: auto; /* CRUCIAL: Se o código for maior que a tela do celular, ele cria uma rolagem interna e não quebra o layout */
+  overflow-x: auto; /* Adiciona rolagem caso o código ultrapasse a tela */
+  border: 1px solid #333333;
 }
-
 /* Ajustando o visual do código gerado pelo Markdown se necessário */
 .codeContainer pre {
   margin: 0;

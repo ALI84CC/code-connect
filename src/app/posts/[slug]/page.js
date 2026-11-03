@@ -22,17 +22,19 @@ export default async function PostPage({ params }) {
   const sanitizedHtml = DOMPurify.sanitize(rawHtml);
 
   return (
-    // 2. Aplicando as classes limpas e sem estilos inline repetitivos
     <main className={styles.main}>
       <BarraBusca />
-      {post && <CardPost post={post} highlighted={true} />}
-
-      <div className={styles.contentSection}>
-        <h1 className={styles.contentTitle}>Código:</h1>
-        <div
-          className={styles.codeContainer}
-          dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
-        />
+      <div className={styles.contentContainer}>
+        {" "}
+        {/* Container unificador */}
+        {post && <CardPost post={post} highlighted={true} />}
+        <div className={styles.contentSection}>
+          <h1 className={styles.contentTitle}>Código:</h1>
+          <div
+            className={styles.codeContainer}
+            dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
+          />
+        </div>
       </div>
     </main>
   );

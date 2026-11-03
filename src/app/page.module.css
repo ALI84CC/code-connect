@@ -1,13 +1,24 @@
+/* No seu home.module.css */
+
+.main {
+  padding: 40px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza a busca e o grid de cards juntos na tela */
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
 .grupoDeCards {
   display: grid;
-  /* Força o grid a criar exatamente duas colunas de tamanhos iguais lado a lado */
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px; /* Espaçamento uniforme entre os cards */
+  gap: 24px;
   width: 100%;
-  max-width: 1004px; /* Garante que fique alinhado de ponta a ponta com sua barra de busca */
-  margin: 32px auto; /* Centraliza o bloco na tela e o afasta da busca e dos botões */
+  max-width: 1004px; /* Ajuste este valor para bater exatamente com o max-width da sua BarraBusca */
+  margin: 32px 0; /* Removemos o 'auto' das laterais pois o .main já está alinhando ao centro */
 }
-/* Responsividade: Caso o usuário abra em telas de celular, os cards empilham em 1 coluna */
+
 @media (max-width: 768px) {
   .grupoDeCards {
     grid-template-columns: repeat(1, 1fr);

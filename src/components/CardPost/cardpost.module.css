@@ -4,14 +4,13 @@
   color: inherit;
 }
 
-/* Card Padrão (responsivo) */
 .card {
   background-color: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
-  position: relative; /* Mantido para alinhar o footer absoluto */
-  width: 100%; /* Ocupa a largura total disponível do grid/flex */
-  max-width: 486px; /* Limite do card normal na Home */
+  position: relative;
+  width: 100%; /* Permite que o grid controle a largura de forma fluida */
+  max-width: 100%; /* Remove o limite rígido de 486px para ele preencher o espaço disponível do grid */
   height: auto;
   box-sizing: border-box;
   display: flex;
@@ -43,7 +42,7 @@
 
 /* Se for o card destacado, a imagem ganha uma altura maior */
 .card.highlighted .figure {
-  height: 320px; 
+  height: 320px;
 }
 
 /* Alvo para o componente de imagem gerado pelo Next.js */
