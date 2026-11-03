@@ -9,13 +9,11 @@ export const CardPost = ({ post, highlighted }) => {
     // 2. Aplique as classes usando a sintaxe 'styles.nomeDaClasse'
     <Link href={`/posts/${post.slug}`} className={styles.link}>
       <article
-        className={styles.card}
-        style={{ width: highlighted ? 993 : 486 }}
+        className={`${styles.card} ${highlighted ? styles.highlighted : ""}`}
       >
         <header className={styles.header}>
           <figure
-            className={styles.figure}
-            style={{ height: highlighted ? 300 : 133 }}
+            className={`${styles.figure} ${highlighted ? styles.highlighted : ""}`}
           >
             <Image
               src={post.cover}

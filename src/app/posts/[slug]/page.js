@@ -3,8 +3,10 @@ import { notFound } from "next/navigation";
 import { remark } from "remark";
 import html from "remark-html";
 import DOMPurify from "isomorphic-dompurify";
-// Importe o CardPost (ajuste o caminho se necessário)
 import { CardPost } from "@/components/CardPost";
+
+// 1. Importando o módulo de estilos da página
+import styles from "./page.module.css";
 
 export default async function PostPage({ params }) {
   const { slug } = await params;
@@ -19,28 +21,14 @@ export default async function PostPage({ params }) {
   const sanitizedHtml = DOMPurify.sanitize(rawHtml);
 
   return (
-    <main
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "32px",
-        maxWidth: "993px",
-        margin: "0 auto",
-        color: "white",
-        fontFamily: "sans-serif",
-        padding: "40px 16px",
-      }}
-    >
-      {/* CORREÇÃO AQUI: É obrigatório passar a prop post={post} para o componente do professor */}
-      {post && <CardPost post={post} />}
+    // 2. Aplicando as classes limpas e sem estilos inline repetitivos
+    <main className={styles.main}>
+      {post && <CardPost post={post} highlighted={true} />}
 
-      {/* Seção do Conteúdo Markdown (Código:) */}
-      <div style={{ marginTop: "32px", lineHeight: "1.8", fontSize: "1.1rem" }}>
-        <h1 style={{ color: "white", fontSize: "22px", marginBottom: "16px" }}>
-          Código:
-        </h1>
+      <div className={styles.contentSection}>
+        <h1 className={styles.contentTitle}>Código:</h1>
         <div
-          style={{ background: "#888", width: "993px", height: "auto" }}
+          className={styles.codeContainer}
           dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
         />
       </div>

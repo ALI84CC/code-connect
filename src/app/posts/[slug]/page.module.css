@@ -1,0 +1,42 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 993px;
+  width: 100%; /* Permite encolher em telas menores */
+  margin: 0 auto;
+  color: white;
+  font-family: sans-serif;
+  padding: 40px 16px;
+  box-sizing: border-box; /* Garante que o padding não quebre a largura total */
+}
+
+.contentSection {
+  margin-top: 32px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.contentTitle {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.codeContainer {
+  background-color: #2d2d2d; /* Um fundo escuro ideal para blocos de código */
+  width: 100%; /* Deixa de ser fixo em 993px e vira flexível */
+  height: auto;
+  padding: 24px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow-x: auto; /* CRUCIAL: Se o código for maior que a tela do celular, ele cria uma rolagem interna e não quebra o layout */
+}
+
+/* Ajustando o visual do código gerado pelo Markdown se necessário */
+.codeContainer pre {
+  margin: 0;
+  white-space: pre-wrap; /* Quebra linhas longas se necessário */
+  word-wrap: break-word;
+}
