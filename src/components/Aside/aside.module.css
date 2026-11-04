@@ -1,4 +1,8 @@
 .aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
   width: 176px; /* Ajuste para bater com o valor real do seu menu no Figma */
   border-radius: 8px;
   background: #171d1f;
@@ -6,4 +10,12 @@
   box-sizing: border-box;
   height: 100%;
   /* height: auto ou sem height faz com que o 'align-items: stretch' do pai funcione */
+}
+
+.asideContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
 }
