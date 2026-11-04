@@ -36,6 +36,8 @@
   border-radius: 8px;
   color: #ffffff;
   outline: none;
+  font-weight: 600;
+  font-size: 22px;
 }
 
 .inputBusca:focus {
