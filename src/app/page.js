@@ -24,14 +24,13 @@ export default async function HomePage({ searchParams }) {
     <main className={styles.main}>
       <BarraBusca />
 
-      {/* Renderiza apenas os 6 posts da página atual */}
-      <section className={styles.grupoDeCards}>
+      {/* O segredo está aqui: adicionamos a key={paginaAtual} */}
+      <section key={paginaAtual} className={styles.grupoDeCards}>
         {currentPosts.map((post) => (
           <CardPost key={post.id} post={post} highlighted={false} />
         ))}
       </section>
 
-      {/* Importação e inserção do seu componente de paginação */}
       <Paginacao paginaAtual={paginaAtual} totalPaginas={totalPaginas} />
     </main>
   );

@@ -11,10 +11,11 @@
   position: relative;
   width: 100%; /* Permite que o grid controle a largura de forma fluida */
   max-width: 100%; /* Remove o limite rígido de 486px para ele preencher o espaço disponível do grid */
-  height: auto;
+  height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 /* Modificador quando o card estiver na página de detalhe [slug] */

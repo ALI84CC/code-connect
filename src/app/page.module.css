@@ -12,15 +12,26 @@
 
 .grupoDeCards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Ou a estrutura que você já usa */
   gap: 24px;
-  width: 100%;
-  max-width: 1004px; /* Ajuste este valor para bater exatamente com o max-width da sua BarraBusca */
-  margin: 32px 0; /* Removemos o 'auto' das laterais pois o .main já está alinhando ao centro */
+  /* Adiciona a animação de fade-in */
+  animation: fadeIn 0.4s ease-in-out forwards;
 }
 
 @media (max-width: 768px) {
   .grupoDeCards {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Definição da animação de transição suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Começa um pouco abaixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
   }
 }

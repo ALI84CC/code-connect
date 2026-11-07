@@ -1,14 +1,13 @@
 import Link from "next/link";
-
 import styles from "./paginacao.module.css";
 
 export function Paginacao({ paginaAtual, totalPaginas }) {
   return (
     <div className={styles.botoesWrapper}>
+      {/* BOTÃO ANTERIOR CONDICIONAL */}
       {paginaAtual > 1 ? (
         <Link
           href={`?_page=${paginaAtual - 1}&_per_page=6`}
-          disabled={paginaAtual === 1}
           className={styles.botaoPaginacao}
         >
           ◀ Anterior
@@ -16,10 +15,13 @@ export function Paginacao({ paginaAtual, totalPaginas }) {
       ) : (
         <span className={styles.botaoPaginacaoDisabled}>◀ Anterior</span>
       )}
+
+      {/* INDICADOR DE PÁGINA */}
       <span style={{ color: "#fff", alignSelf: "center" }}>
         {paginaAtual} de {totalPaginas}
       </span>
-      {/* Botão Próximo */}
+
+      {/* BOTÃO PRÓXIMO CONDICIONAL */}
       {paginaAtual < totalPaginas ? (
         <Link
           href={`?_page=${paginaAtual + 1}&_per_page=6`}
@@ -28,9 +30,7 @@ export function Paginacao({ paginaAtual, totalPaginas }) {
           Próximo ▶
         </Link>
       ) : (
-        <button className={styles.botaoPaginacao} disabled>
-          Próximo ▶
-        </button>
+        <span className={styles.botaoPaginacaoDisabled}>Próximo ▶</span>
       )}
     </div>
   );
