@@ -6,32 +6,65 @@ import { Paginacao } from "@/components/Paginacao/paginacao";
 
 // No Next.js App Router, as propriedades searchParams são passadas automaticamente para a página
 export default async function HomePage({ searchParams }) {
-  const posts = getAllPosts();
-
-  // Captura a página atual da URL (ex: ?_page=2). Se não existir, assume a página 1.
   const params = await searchParams;
-  const paginaAtual = Number(params._page) || 1;
 
-  const cardsPorPagina = 6;
-  const totalPaginas = Math.ceil(posts.length / cardsPorPagina);
+  // 1. CORREÇÃO: Garante a decodificação correta de caracteres especiais (como ç e ã)
+  // e remove espaços vazios nas pontas.
+  const termoBruto = params?.q ? String(params.q) : "";
+  const termoBusca = decodeURIComponent(termoBruto).trim().toLowerCase();
 
-  // Lógica para limitar a quantidade de itens na tela (Fatiando o array)
-  const indexOfLastCard = paginaAtual * cardsPorPagina;
-  const indexOfFirstCard = indexOfLastCard - cardsPorPagina;
-  const currentPosts = posts.slice(indexOfFirstCard, indexOfLastCard);
+  // 2. CORREÇÃO: Busca os posts garantindo acesso ao Array correto (.posts)
+  const dadosPosts = getAllPosts();
+  const allPosts = Array.isArray(dadosPosts)
+    ? dadosPosts
+    : dadosPosts?.posts || [];
+
+  // 3. Filtragem extremamente segura e resiliente
+  const postsFiltrados = allPosts.filter((post) => {
+    const titulo = post?.title ? String(post.title).trim().toLowerCase() : "";
+    const descricao = post?.body ? String(post.body).trim().toLowerCase() : "";
+
+    return titulo.includes(termoBusca) || descricao.includes(termoBusca);
+  });
+
+  // 4. Paginação baseada nos posts filtrados
+  const paginaAtual = Number(params?._page) || 1;
+  const cardsPerPage = 6;
+  const totalPaginas = Math.ceil(postsFiltrados.length / cardsPerPage);
+
+  const indexOfLastCard = paginaAtual * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentPosts = postsFiltrados.slice(indexOfFirstCard, indexOfLastCard);
 
   return (
     <main className={styles.main}>
       <BarraBusca />
 
-      {/* O segredo está aqui: adicionamos a key={paginaAtual} */}
-      <section key={paginaAtual} className={styles.grupoDeCards}>
-        {currentPosts.map((post) => (
-          <CardPost key={post.id} post={post} highlighted={false} />
-        ))}
-      </section>
+      {/* RENDERIZAÇÃO CONDICIONAL */}
+      {postsFiltrados.length === 0 ? (
+        /* Caso não encontre nenhum post */
+        <div className={styles.semResultados}>
+          <h2>Nenhum resultado encontrado 🔍</h2>
+          <p>
+            Não encontramos publicações com o termo digitado. Tente buscar por
+            outra palavra-chave!
+          </p>
+        </div>
+      ) : (
+        /* Caso existam posts, exibe a estrutura normal */
+        <>
+          <section key={paginaAtual} className={styles.grupoDeCards}>
+            {currentPosts.map((post) => (
+              <CardPost key={post.id} post={post} highlighted={false} />
+            ))}
+          </section>
 
-      <Paginacao paginaAtual={paginaAtual} totalPaginas={totalPaginas} />
+          {/* Só mostra a paginação se houver mais de uma página */}
+          {totalPaginas > 1 && (
+            <Paginacao paginaAtual={paginaAtual} totalPaginas={totalPaginas} />
+          )}
+        </>
+      )}
     </main>
   );
 }

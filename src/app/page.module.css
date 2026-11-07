@@ -18,6 +18,28 @@
   animation: fadeIn 0.4s ease-in-out forwards;
 }
 
+.semResultados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.semResultados h2 {
+  color: #10b981; /* Cor verde parecida com o seu botão Publicar */
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+.semResultados p {
+  color: #9ca3af; /* Cinza claro para descrição */
+  max-width: 400px;
+}
+
 @media (max-width: 768px) {
   .grupoDeCards {
     grid-template-columns: repeat(1, 1fr);

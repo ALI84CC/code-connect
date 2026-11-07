@@ -7,6 +7,8 @@ const jsonPath = path.join(process.cwd(), "src", "data", "posts.json");
 export function getAllPosts() {
   const fileData = fs.readFileSync(jsonPath, "utf-8");
   const dadosCompletos = JSON.parse(fileData);
+
+  // Corrigido: Retorna especificamente a lista de posts de dentro do JSON
   return dadosCompletos.posts;
 }
 

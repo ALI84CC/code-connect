@@ -45,18 +45,14 @@
 }
 
 .botaoBusca {
-  flex-shrink: 0; /* Impede que o botão encolha */
+  flex-shrink: 0;
   width: 102px;
-  height: 75px;
+  height: 51px; /* Alterado de 75px para 51px para igualar ao input */
 
   background-color: #81fe88;
   color: #050505;
-
   font-weight: 600;
   font-size: 1rem;
-
-  padding: 12px 16px;
-
   border: none;
   border-radius: 8px;
   cursor: pointer;
