@@ -3,10 +3,13 @@ import { getAllPosts } from "@/lib/route";
 import { CardPost } from "@/components/CardPost"; // Reaproveitando o componente que ajustamos
 import styles from "./page.module.css"; // Importando seu CSS Module
 import { Paginacao } from "@/components/Paginacao/paginacao";
+import { ModalPublicar } from "@/components/ModalPublicar";
 
 // No Next.js App Router, as propriedades searchParams são passadas automaticamente para a página
 export default async function HomePage({ searchParams }) {
   const params = await searchParams;
+
+  const exibirModal = params?.modal === "true";
 
   // 1. CORREÇÃO: Garante a decodificação correta de caracteres especiais (como ç e ã)
   // e remove espaços vazios nas pontas.
@@ -65,6 +68,7 @@ export default async function HomePage({ searchParams }) {
           )}
         </>
       )}
+      {exibirModal && <ModalPublicar />}
     </main>
   );
 }
