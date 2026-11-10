@@ -19,3 +19,19 @@
   gap: 32px;
   width: 100%;
 }
+
+.botaoPublicar {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Alinha horizontalmente */
+
+  width: 117px;
+  height: 57px;
+
+  border: 1px solid #81fe88;
+  border-radius: 8px;
+  color: #81fe88;
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: none;
+}
