@@ -31,7 +31,9 @@ export const Aside = () => {
           alt="Botao do perfil  "
           style={{ width: "32px", height: "32px" }}
         />
-        <p style={{ margin: "0", padding: "0", color: "white" }}>Perfil</p>
+        <Link href="?modal=true" className={styles.botaoPerfil}>
+          Perfil
+        </Link>
         <Image
           src={info}
           alt="Botao de informacoes"

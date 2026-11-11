@@ -42,6 +42,7 @@
   border-radius: 8px;
   box-sizing: border-box;
   overflow-x: auto; /* Adiciona rolagem caso o código ultrapasse a tela */
+  overflow-y: scroll;
   border: 1px solid #333333;
 }
 /* Ajustando o visual do código gerado pelo Markdown se necessário */
