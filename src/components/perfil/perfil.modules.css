@@ -10,3 +10,15 @@
   justify-content: center;
   z-index: 999;
 }
+
+.botaoFechar {
+  font-size: 1.5rem;
+  color: #a1a1aa;
+  text-decoration: none;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

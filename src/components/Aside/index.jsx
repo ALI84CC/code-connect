@@ -31,7 +31,7 @@ export const Aside = () => {
           alt="Botao do perfil  "
           style={{ width: "32px", height: "32px" }}
         />
-        <Link href="?modal=true" className={styles.botaoPerfil}>
+        <Link href="!modal=true" className={styles.botaoPerfil}>
           Perfil
         </Link>
         <Image
