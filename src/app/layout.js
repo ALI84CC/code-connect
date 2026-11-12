@@ -18,13 +18,8 @@ export default function RootLayout({ children }) {
     <html lang="pt-br" className={prompt.className}>
       <body>
         <div className="app-container">
-          <div>
-            <Aside />
-          </div>
-          <main className="main-content">
-            {/* O Next.js vai injetar a sua page.js exatamente aqui dentro */}
-            {children}
-          </main>
+          <Aside />
+          <main className="main-content">{children}</main>
         </div>
       </body>
     </html>

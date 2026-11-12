@@ -16,14 +16,20 @@ export default function ModalPublicar() {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
-        <div className={styles.header}>
-          <h2>Nova Publicação</h2>
-          {/* Link para voltar/fechar retirando o parâmetro da URL */}
-          <Link href="?" className={styles.botaoFechar}>
-            &times;
-          </Link>
+        // Clicar no fundo escuro fecha o modal
+        <div className={styles.overlay} onClick={aoFechar}>
+          {/* stopPropagation impede que clicar dentro do formulário feche o modal */}
+          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+            <button onClick={aoFechar} className={styles.botaoFechar}>
+              X
+            </button>
+
+            {/* Coloque aqui o restante do código do seu formulário de publicação */}
+            <h2>Novo Projeto</h2>
+          </div>
         </div>
 
+        
         <form onSubmit={lidarComEnvio} className={styles.formulario}>
           <input type="text" placeholder="Título da publicação" required />
           <textarea
