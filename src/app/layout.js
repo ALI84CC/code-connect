@@ -1,5 +1,5 @@
 import { Prompt } from "next/font/google";
-import { Aside } from "@/components/Aside";
+import Aside from "@/components/Aside";
 import "./globals.css";
 
 export const metadata = {

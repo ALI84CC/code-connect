@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styles from "./modalPublicar.module.css";
 
-export function ModalPublicar() {
+export default function ModalPublicar() {
   const lidarComEnvio = (e) => {
     e.preventDefault();
     alert(

@@ -3,13 +3,14 @@
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  width: 176px; /* Ajuste para bater com o valor real do seu menu no Figma */
+  width: 176px;
+  min-width: 176px; /* Garante que a largura nunca seja esmagada */
+  flex-shrink: 0; /* Impede o flexbox pai de encolher o menu */
   border-radius: 8px;
   background: #171d1f;
   padding: 40px 16px;
   box-sizing: border-box;
-  height: 100%;
-  /* height: auto ou sem height faz com que o 'align-items: stretch' do pai funcione */
+  height: auto;
 }
 
 .asideContent {
@@ -22,12 +23,10 @@
 
 .botaoPublicar {
   display: flex;
-  align-items: center; /* Alinha verticalmente */
-  justify-content: center; /* Alinha horizontalmente */
-
+  align-items: center;
+  justify-content: center;
   width: 117px;
   height: 57px;
-
   border: 1px solid #81fe88;
   border-radius: 8px;
   color: #81fe88;
@@ -36,8 +35,36 @@
   text-decoration: none;
 }
 
-.botaoPerfil {
+.itemMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
   margin: 0;
   padding: 0;
+  cursor: pointer;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalBox {
+  background-color: #171d1f;
   color: white;
+  padding: 24px;
+  border-radius: 8px;
+  min-width: 400px;
+  border: 1px solid #81fe88;
 }

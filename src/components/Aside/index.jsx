@@ -1,52 +1,85 @@
+"use client";
 import Image from "next/image";
-import styles from "./aside.module.css";
-import logo from "../Aside/Logo.png";
-import feed from "../Aside/feed.png";
-import account_circle from "../Aside/account_circle.png";
-import info from "../Aside/info.png";
-import logout from "../Aside/logout.png";
 import Link from "next/link";
+import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import styles from "./aside.module.css";
 
-export const Aside = () => {
+import logo from "./Logo.png";
+import feed from "./feed.png";
+import account_circle from "./account_circle.png";
+import info from "./info.png";
+import logout from "./logout.png";
+
+export default function Aside({ children }) {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const modalAtivo = searchParams.get("modal");
+
+  const fecharModal = () => {
+    router.push(pathname, { scroll: false });
+  };
+
   return (
-    <aside className={styles.aside}>
-      {/* <Image src={logo} alt="Logo do component" /> */}
-      <div className={styles.asideContent}>
-        <Image
-          src={logo}
-          alt="Logo do component"
-          style={{ width: "100%", height: "auto" }}
-        />
-        <Link href="?modal=true" className={styles.botaoPublicar}>
-          Publicar
-        </Link>
-        <Image
-          src={feed}
-          alt="Botao de postagens"
-          style={{ width: "32px", height: "32px" }}
-        />
-        <p style={{ margin: "0", padding: "0", color: "white" }}>Feed</p>
-        <Image
-          src={account_circle}
-          alt="Botao do perfil  "
-          style={{ width: "32px", height: "32px" }}
-        />
-        <Link href="!modal=true" className={styles.botaoPerfil}>
-          Perfil
-        </Link>
-        <Image
-          src={info}
-          alt="Botao de informacoes"
-          style={{ width: "32px", height: "32px" }}
-        />
-        <p style={{ margin: "0", padding: "0", color: "white" }}>Sobre Nós</p>
-        <Image
-          src={logout}
-          alt="Botao de saida"
-          style={{ width: "32px", height: "32px" }}
-        />
-        <p style={{ margin: "0", padding: "0", color: "white" }}>Sair</p>
-      </div>
-    </aside>
+    <>
+      <aside className={styles.aside}>
+        <div className={styles.asideContent}>
+          <Image
+            src={logo}
+            alt="Logo do component"
+            style={{ width: "100%", height: "auto" }}
+          />
+
+          <Link href="?modal=publicar" className={styles.botaoPublicar}>
+            Publicar
+          </Link>
+
+          <Link href="?modal=feed" className={styles.itemMenu}>
+            <Image src={feed} alt="Botão de postagens" width={32} height={32} />
+            <span>Feed</span>
+          </Link>
+
+          <Link href="?modal=perfil" className={styles.itemMenu}>
+            <Image
+              src={account_circle}
+              alt="Botão do perfil"
+              width={32}
+              height={32}
+            />
+            <span>Perfil</span>
+          </Link>
+
+          <Link href="?modal=SobreNos" className={styles.itemMenu}>
+            <Image
+              src={info}
+              alt="Botão de informações"
+              width={32}
+              height={32}
+            />
+            <span>Sobre Nós</span>
+          </Link>
+
+          <div className={styles.itemMenu}>
+            <Image src={logout} alt="Botão de saída" width={32} height={32} />
+            <span>Sair</span>
+          </div>
+        </div>
+      </aside>
+
+      {/* Só mantenha essa linha se você estiver passando páginas por dentro do <Aside> no layout.js */}
+      {children}
+
+      {/* Modal flutuante (não afeta o layout do menu) */}
+      {modalAtivo === "publicar" && (
+        <div className={styles.modalOverlay} onClick={fecharModal}>
+          <div className={styles.modalBox} onClick={(e) => e.stopPropagation()}>
+            <h2>Novo Post</h2>
+            
+            <button onClick={fecharModal}>Fechar</button>
+          </div>
+        </div>
+      )}
+    </>
   );
-};
+}
