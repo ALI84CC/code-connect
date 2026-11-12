@@ -1,24 +1,27 @@
-'use client'
+"use client";
 import styles from "@/components/perfil/perfil.modules.css";
+import Link from "next/link";
 
-export function ModalPublicar() {
-  const cadastrarPerfil  = (e) => {
+export default function ModalPerfil() {
+  const cadastrarPerfil = (e) => {
     e.preventDefault();
-    alert('Post simulado com sucesso! (Em um cenário real, aqui dispararíamos uma Server Action para salvar no posts.json)');
+    alert(
+      "Post simulado com sucesso! (Em um cenário real, aqui dispararíamos uma Server Action para salvar no posts.json)",
+    );
     // Redireciona para fechar o modal
-    window.location.search = '';
+    window.location.search = "";
   };
 
   return (
     <div className={styles.overlay}>
-       <div className={styles.header}>
-          <h2>Novo Perfil</h2>
-          {/* Link para voltar/fechar retirando o parâmetro da URL */}
-          <Link href="!" className={styles.botaoFechar}>
-            &times;
-          </Link>
-        </div>
-      <form className={styles.formulario} onSubmit={cadastrarPerfil} >
+      <div className={styles.header}>
+        <h2>Novo Perfil</h2>
+        {/* Link para voltar/fechar retirando o parâmetro da URL */}
+        <Link href="?" className={styles.botaoFechar}>
+          &times;
+        </Link>
+      </div>
+      <form className={styles.formulario} onSubmit={cadastrarPerfil}>
         <label
           htmlFor="username"
           placeholder="usuario123"

@@ -10,6 +10,9 @@ import account_circle from "./account_circle.png";
 import info from "./info.png";
 import logout from "./logout.png";
 
+import ModalPublicar from "@/components/ModalPublicar";
+import ModalPerfil from "../perfil";
+
 export default function Aside({ children }) {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -71,15 +74,9 @@ export default function Aside({ children }) {
       {children}
 
       {/* Modal flutuante (não afeta o layout do menu) */}
-      {modalAtivo === "publicar" && (
-        <div className={styles.modalOverlay} onClick={fecharModal}>
-          <div className={styles.modalBox} onClick={(e) => e.stopPropagation()}>
-            <h2>Novo Post</h2>
-            
-            <button onClick={fecharModal}>Fechar</button>
-          </div>
-        </div>
-      )}
+      {/* 2. Conexão feita: exibe o ModalPublicar quando o link for clicado */}
+      {modalAtivo === "publicar" && <ModalPublicar aoFechar={fecharModal} />}
+      {modalAtivo === "perfil" && <ModalPerfil aoFechar={fecharModal} />}
     </>
   );
 }
