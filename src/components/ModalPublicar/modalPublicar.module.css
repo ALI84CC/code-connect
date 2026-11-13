@@ -40,7 +40,8 @@
   gap: 16px;
 }
 
-.formulario input, .formulario textarea {
+.formulario input,
+.formulario textarea {
   padding: 12px;
   background-color: #09090b;
   border: 1px solid #3f3f46;
