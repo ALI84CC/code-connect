@@ -4,6 +4,7 @@ import { CardPost } from "@/components/CardPost"; // Reaproveitando o componente
 import styles from "./page.module.css"; // Importando seu CSS Module
 import { Paginacao } from "@/components/Paginacao/paginacao";
 import { ModalPublicar } from "@/components/ModalPublicar";
+import { ModalPerfil } from "@/components/perfil/index";
 
 // No Next.js App Router, as propriedades searchParams são passadas automaticamente para a página
 export default async function HomePage({ searchParams }) {
@@ -69,6 +70,7 @@ export default async function HomePage({ searchParams }) {
         </>
       )}
       {exibirModal && <ModalPublicar />}
+      {exibirModal && <ModalPerfil />}
     </main>
   );
 }

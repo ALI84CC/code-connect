@@ -11,7 +11,7 @@ import info from "./info.png";
 import logout from "./logout.png";
 
 import ModalPublicar from "@/components/ModalPublicar";
-import ModalPerfil from "../perfil";
+import ModalPerfil from "@/components/perfil";
 
 export default function Aside({ children }) {
   const searchParams = useSearchParams();

@@ -1,0 +1,87 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #171d1f; /* Ajuste para a cor de fundo do seu tema */
+  padding: 24px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  z-index: 1001;
+}
+.header {
+  display: flex;
+  justify-content: space-between; /* Empurra o título para a esquerda e o X para a direita */
+  align-items: center; /* Alinha os dois perfeitamente na mesma altura */
+  margin-bottom: 16px; /* Dá um respiro antes do formulário */
+}
+
+.header h2 {
+  font-size: 22px;
+  color: white;
+}
+
+.botaoFechar {
+  background: transparent;
+  border: none;
+  color: #e1e1e6; /* Cor clara para contrastar com o fundo escuro */
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botaoFechar:hover {
+  color: #81fe88; /* Verde destaque do tema CodeConnect ao passar o mouse */
+}
+
+.botaoFechar {
+  font-size: 1.5rem;
+  color: #a1a1aa;
+  text-decoration: none;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+.formulario label {
+  font-size: 22px;
+  color: white;
+}
+.formulario input {
+  height: 25px;
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.formulario input[type="text"]:focus {
+  border: 3px solid #555;
+}
+
+.formulario input[type="email"]:focus {
+  border: 3px solid #555;
+}
+
+.formulario button {
+  width: 100%;
+  background-color: #081c53;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
