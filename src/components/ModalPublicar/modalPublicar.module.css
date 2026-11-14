@@ -28,6 +28,11 @@
   color: #fff;
 }
 
+.header h2 {
+  font-size: 22px;
+  color: white;
+}
+
 .botaoFechar {
   font-size: 1.5rem;
   color: #a1a1aa;
@@ -37,24 +42,42 @@
 .formulario {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
+}
+.formulario label {
+  font-size: 22px;
+  color: white;
 }
 
-.formulario input,
+.formulario input {
+  height: 25px;
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.formulario input[type="text"]:focus {
+  border: 3px solid #555;
+}
+
 .formulario textarea {
-  padding: 12px;
-  background-color: #09090b;
-  border: 1px solid #3f3f46;
-  border-radius: 6px;
-  color: #fff;
+  min-width: 45%;
+  height: 150px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
 }
 
-.botaoEnviar {
-  background-color: #81fe88;
-  color: #050505;
-  font-weight: 600;
-  padding: 12px;
+.formulario button {
+  width: 100%;
+  background-color: #081c53;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 3px;
 }

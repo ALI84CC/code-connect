@@ -3,7 +3,7 @@
 import { useRouter, usePathname } from "next/navigation";
 import styles from "./modalPublicar.module.css";
 
-export default function ModalPublicar() {
+export default function ModalPublicar({ aoFechar }) {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -20,27 +20,33 @@ export default function ModalPublicar() {
       "Post simulado com sucesso! (Em um cenário real, aqui dispararíamos uma Server Action para salvar no posts.json)",
     );
     // Fecha o modal de forma suave pelo Next.js
-    fecharModal();
+    if (aoFechar) {
+      aoFechar();
+    }
   };
 
   return (
-    /* Clicar no fundo escuro fecha o modal */
     <div className={styles.overlay} onClick={fecharModal}>
-      {/* stopPropagation impede que clicar dentro do modal feche ele */}
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        {/* type="button" é essencial para não disparar o submit do formulário */}
-        <button
-          type="button"
-          onClick={fecharModal}
-          aria-label="Fechar modal"
-          className={styles.botaoFechar}
-        >
-          ✕
-        </button>
-
-        <h2>Novo Projeto</h2>
-
+        <div className={styles.header}>
+          <h2>Novo Perfil</h2>
+          <button
+            type="button"
+            onClick={aoFechar}
+            aria-label="Fechar modal"
+            className={styles.botaoFechar}
+          >
+            X
+          </button>
+        </div>
         <form onSubmit={lidarComEnvio} className={styles.formulario}>
+          <label
+            htmlFor="publicacao"
+            placeholder="nome da publicação"
+            alt="titulo da publicação"
+          >
+            Título da publicação
+          </label>
           <input type="text" placeholder="Título da publicação" required />
           <textarea
             placeholder="Conteúdo do post..."
