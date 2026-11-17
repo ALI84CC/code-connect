@@ -40,20 +40,26 @@
 }
 
 .formulario {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 .formulario label {
-  font-size: 22px;
+  height: 20px;
+  min-width: 48%;
+  margin-bottom: 10px;
   color: white;
+  font-size: 20px;
 }
 
 .formulario input {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
   height: 25px;
-  padding: 12px;
-  margin: 10px 0;
-  box-sizing: border-box;
 }
 
 .formulario input[type="text"]:focus {
