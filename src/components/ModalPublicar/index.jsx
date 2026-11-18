@@ -29,7 +29,7 @@ export default function ModalPublicar({ aoFechar }) {
     <div className={styles.overlay} onClick={fecharModal}>
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <div className={styles.header}>
-          <h2>Novo Perfil</h2>
+          <h2>Publicação</h2>
           <button
             type="button"
             onClick={aoFechar}

@@ -41,6 +41,11 @@ export default function ModalPerfil({ aoFechar }) {
 
         <form className={styles.formulario} onSubmit={cadastrarPerfil}>
           <label
+            htmlFor="nickname"
+            placeholder="@usuario"
+            alt="nome alternativo"
+          ></label>
+          <label
             htmlFor="username"
             placeholder="usuario123"
             alt="Email ou Usuário"
@@ -52,6 +57,11 @@ export default function ModalPerfil({ aoFechar }) {
           <label htmlFor="email">Email:</label>
           <input type="email" id="email" name="email" />
           <br />
+          <textarea
+            placeholder="Informações Pessoais, profissionais..."
+            rows={5}
+            required
+          ></textarea>
           <button type="submit">Atualizar Perfil</button>
         </form>
       </div>
