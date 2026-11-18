@@ -16,7 +16,7 @@
   padding: 24px;
   border-radius: 16px;
   width: 100%;
-  max-width: 500px;
+  width: 320px;
   z-index: 1001;
 }
 .header {
@@ -59,10 +59,13 @@
   color: white;
 }
 .formulario input {
-  height: 25px;
+  height: 39px;
+  width: 317px;
   padding: 12px;
   margin: 10px 0;
   box-sizing: border-box;
+  border-radius: 4px;
+  color: #888;
 }
 
 .formulario input[type="text"]:focus {
@@ -74,7 +77,8 @@
 }
 
 .formulario button {
-  width: 100%;
+  height: 39px;
+  width: 317px;
   background-color: #081c53;
   color: white;
   padding: 14px;
